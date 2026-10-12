@@ -5,150 +5,178 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sehras — Luxury Weddings &amp; Hospitality</title>
 <meta name="description" content="Sehras designs and hosts luxury weddings, destination celebrations, and hospitality experiences across India. Led personally by founder Shreyas. Call +91 93531 27120.">
+<meta name="theme-color" content="#0f0b09">
 <meta property="og:title" content="Sehras — Luxury Weddings & Hospitality">
 <meta property="og:description" content="Every vow, held with care. Luxury wedding design, planning, and hospitality — led by Shreyas.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/sehras-logo-full.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/png" href="assets/favicon.png">
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body class="intro-lock">
 
-<!-- INTRO / BRAND ENTRANCE ANIMATION -->
+<!-- ============ INTRO / BRAND ENTRANCE ============ -->
 <div class="intro-overlay" id="introOverlay" aria-hidden="true">
   <div class="intro-bg"></div>
-  <div class="intro-vignette"></div>
   <div class="intro-particles" id="introParticles"></div>
   <div class="intro-content">
     <img class="intro-logo-img" src="assets/sehras-logo-full.png" alt="Sehras">
-    <div class="intro-rule"></div>
+    <div class="intro-line"></div>
     <p class="intro-tag">Luxury Weddings &amp; Hospitality</p>
   </div>
   <button type="button" class="intro-skip" id="introSkip">Skip</button>
 </div>
 
-<div class="grain"></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
 
-<!-- NAV -->
+<!-- ============ NAV ============ -->
 <header class="nav" id="nav">
   <div class="nav-inner">
-    <a href="#top" class="logo">
+    <a href="#top" class="logo" aria-label="Sehras home">
       <img class="logo-mark" src="assets/sehras-mark.png" alt="" aria-hidden="true">
       <span class="logo-word">Sehras</span>
     </a>
-    <nav class="nav-links">
+    <nav class="nav-links" aria-label="Primary">
       <a href="#services">Services</a>
       <a href="#experiences">Experiences</a>
       <a href="#about">About</a>
       <a href="#gallery">Gallery</a>
       <a href="#designer">Designer</a>
       <a href="#testimonials">Stories</a>
-      <a href="#contact">Enquire</a>
     </nav>
-    <a href="tel:+919353127120" class="nav-phone">+91 93531 27120</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Open menu">
-      <span></span><span></span><span></span>
+    <div class="nav-cta">
+      <a href="tel:+919353127120" class="nav-phone">+91 93531 27120</a>
+      <a href="#contact" class="btn btn-gold btn-sm magnetic">Enquire</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span>
     </button>
   </div>
 </header>
 
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#services">Services</a>
-  <a href="#experiences">Experiences</a>
-  <a href="#about">About</a>
-  <a href="#gallery">Gallery</a>
-  <a href="#designer">Designer</a>
-  <a href="#testimonials">Stories</a>
-  <a href="#contact">Enquire</a>
+<!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <img class="mobile-menu-mark" src="assets/sehras-mark.png" alt="" aria-hidden="true">
+  <nav>
+    <a href="#services"><span>01</span>Services</a>
+    <a href="#experiences"><span>02</span>Experiences</a>
+    <a href="#about"><span>03</span>About</a>
+    <a href="#gallery"><span>04</span>Gallery</a>
+    <a href="#designer"><span>05</span>Designer</a>
+    <a href="#testimonials"><span>06</span>Stories</a>
+    <a href="#contact"><span>07</span>Enquire</a>
+  </nav>
   <a href="tel:+919353127120" class="mobile-phone">+91 93531 27120</a>
 </div>
 
-<!-- HERO -->
+<main>
+
+<!-- ============ HERO ============ -->
 <section class="hero" id="top">
-  <div class="hero-media">
-    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1800&auto=format&fit=crop" alt="" />
-    <div class="hero-veil"></div>
+  <div class="hero-slides" id="heroSlides">
+    <div class="hero-slide is-active"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2000&auto=format&fit=crop" alt=""></div>
+    <div class="hero-slide"><img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=2000&auto=format&fit=crop" alt=""></div>
+    <div class="hero-slide"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2000&auto=format&fit=crop" alt=""></div>
+    <div class="hero-slide"><img src="https://images.unsplash.com/photo-1525258207990-3a4dbef2f0eb?q=80&w=2000&auto=format&fit=crop" alt=""></div>
   </div>
+  <div class="hero-veil"></div>
+  <canvas class="hero-sparkles" id="heroSparkles" aria-hidden="true"></canvas>
+
   <div class="hero-content">
-    <div class="hero-glass">
-      <p class="eyebrow">Bengaluru · Destination · Worldwide</p>
-      <h1 class="hero-title">Every <em>vow</em>,<br>held with care.</h1>
-      <p class="hero-sub">Sehras designs and hosts luxury weddings and hospitality experiences — from the first proposal to the last toast.</p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">Begin your story</a>
-        <a href="#gallery" class="btn btn-ghost">See our work</a>
-      </div>
+    <p class="eyebrow hero-eyebrow"><span class="eyebrow-line"></span>Bengaluru · Destination · Worldwide</p>
+    <h1 class="hero-title">
+      <span class="line"><span>Every <em>vow</em>,</span></span>
+      <span class="line"><span>held with <em class="shimmer">care.</em></span></span>
+    </h1>
+    <p class="hero-sub">Sehras designs and hosts luxury weddings and hospitality experiences — from the first proposal to the last toast.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-gold magnetic">Begin your story <span class="btn-arrow">→</span></a>
+      <a href="#gallery" class="btn btn-outline-light magnetic">See our work</a>
     </div>
   </div>
-  <div class="hero-scroll">
-    <span></span>
-    <p>Scroll</p>
+
+  <div class="hero-foot">
+    <div class="hero-meta">
+      <div><strong data-count="120" data-suffix="+">120+</strong><span>Weddings hosted</span></div>
+      <div><strong data-count="15" data-suffix="+">15+</strong><span>Cities &amp; destinations</span></div>
+      <div><strong>Shreyas</strong><span>Leads every wedding</span></div>
+    </div>
+    <div class="hero-counter" aria-hidden="true">
+      <span id="heroIndex">01</span>
+      <span class="hero-bar"><i id="heroBar"></i></span>
+      <span id="heroTotal">04</span>
+    </div>
   </div>
+
+  <a href="#story" class="hero-scroll" aria-label="Scroll to content">
+    <span class="hero-scroll-line"></span>
+    <span class="hero-scroll-label">Scroll</span>
+  </a>
 </section>
 
-<!-- MARQUEE / RIBBON -->
-<div class="ribbon">
+<!-- ============ RIBBON ============ -->
+<div class="ribbon" aria-hidden="true">
   <div class="ribbon-track">
-    <span>Weddings</span><span class="dot">·</span>
-    <span>Sangeet &amp; Mehendi</span><span class="dot">·</span>
-    <span>Destination Events</span><span class="dot">·</span>
-    <span>Hospitality &amp; Guest Care</span><span class="dot">·</span>
-    <span>Décor &amp; Styling</span><span class="dot">·</span>
-    <span>Weddings</span><span class="dot">·</span>
-    <span>Sangeet &amp; Mehendi</span><span class="dot">·</span>
-    <span>Destination Events</span><span class="dot">·</span>
-    <span>Hospitality &amp; Guest Care</span><span class="dot">·</span>
-    <span>Décor &amp; Styling</span><span class="dot">·</span>
+    <span>Weddings</span><i>✦</i>
+    <span>Sangeet &amp; Mehendi</span><i>✦</i>
+    <span>Destination Events</span><i>✦</i>
+    <span>Hospitality &amp; Guest Care</span><i>✦</i>
+    <span>Décor &amp; Styling</span><i>✦</i>
+    <span>Weddings</span><i>✦</i>
+    <span>Sangeet &amp; Mehendi</span><i>✦</i>
+    <span>Destination Events</span><i>✦</i>
+    <span>Hospitality &amp; Guest Care</span><i>✦</i>
+    <span>Décor &amp; Styling</span><i>✦</i>
   </div>
 </div>
 
-<!-- INTRO STATEMENT -->
-<section class="intro">
-  <div class="intro-media">
-    <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&w=1800&auto=format&fit=crop" alt="" />
-  </div>
-  <div class="intro-glass">
-    <div class="intro-rule" aria-hidden="true">
-      <svg viewBox="0 0 240 24" class="motif"><path d="M0 12 H90 M150 12 H240" stroke="currentColor" stroke-width="1"/><circle cx="120" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1"/><circle cx="120" cy="12" r="1.5" fill="currentColor"/><path d="M105 12 Q112 4 120 12 Q128 20 135 12" fill="none" stroke="currentColor" stroke-width="1"/></svg>
-    </div>
-    <p class="intro-text">We believe a wedding is not an event to manage but a <em>world</em> to build — one where every guest is hosted as family, and every detail carries the weight of intention. That is the craft of Sehras.</p>
+<!-- ============ STATEMENT ============ -->
+<section class="statement" id="story">
+  <div class="statement-inner">
+    <svg viewBox="0 0 240 24" class="motif reveal" aria-hidden="true"><path d="M0 12 H90 M150 12 H240" stroke="currentColor" stroke-width="1"/><circle cx="120" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1"/><circle cx="120" cy="12" r="1.5" fill="currentColor"/><path d="M105 12 Q112 4 120 12 Q128 20 135 12" fill="none" stroke="currentColor" stroke-width="1"/></svg>
+    <p class="statement-text" id="statementText">We believe a wedding is not an event to manage but a <em>world</em> to build — one where every guest is hosted as family, and every detail carries the weight of intention. That is the craft of Sehras.</p>
   </div>
 </section>
 
-<!-- SERVICES -->
+<!-- ============ SERVICES ============ -->
 <section class="services" id="services">
-  <div class="section-head">
-    <p class="eyebrow">What we do</p>
-    <h2>A complete world,<br>built around you.</h2>
+  <div class="section-head split">
+    <div>
+      <p class="eyebrow reveal"><span class="eyebrow-line"></span>What we do</p>
+      <h2 class="reveal">A complete world,<br><em>built around you.</em></h2>
+    </div>
+    <p class="section-lede reveal">Six disciplines, one team, one point of contact. Every service is planned in-house and led personally from start to finish.</p>
   </div>
 
   <div class="service-grid">
-    <article class="service-card">
-      <div class="service-num">I</div>
+    <article class="service-card reveal">
+      <div class="service-top"><span class="service-num">I</span><svg class="service-icon" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4 L24 16 L36 20 L24 24 L20 36 L16 24 L4 20 L16 16 Z" fill="none" stroke="currentColor"/></svg></div>
       <h3>Wedding Design</h3>
       <p>Concept, styling, and full creative direction — from the colour story to the last floral stem — tailored to your families and your story.</p>
     </article>
-    <article class="service-card">
-      <div class="service-num">II</div>
+    <article class="service-card reveal">
+      <div class="service-top"><span class="service-num">II</span><svg class="service-icon" viewBox="0 0 40 40" aria-hidden="true"><rect x="7" y="9" width="26" height="24" rx="2" fill="none" stroke="currentColor"/><path d="M7 16 H33 M14 5 V12 M26 5 V12" stroke="currentColor"/><circle cx="20" cy="24" r="3" fill="none" stroke="currentColor"/></svg></div>
       <h3>Event Planning</h3>
       <p>Sangeet, mehendi, haldi, and reception, planned with precise timelines and vendor coordination so nothing is left to chance.</p>
     </article>
-    <article class="service-card">
-      <div class="service-num">III</div>
+    <article class="service-card reveal">
+      <div class="service-top"><span class="service-num">III</span><svg class="service-icon" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="14" fill="none" stroke="currentColor"/><path d="M6 20 H34 M20 6 C13 13 13 27 20 34 C27 27 27 13 20 6" fill="none" stroke="currentColor"/></svg></div>
       <h3>Destination Weddings</h3>
       <p>Venues across India and abroad, scouted and managed end-to-end — travel, stay, permissions, and logistics included.</p>
     </article>
-    <article class="service-card">
-      <div class="service-num">IV</div>
+    <article class="service-card reveal">
+      <div class="service-top"><span class="service-num">IV</span><svg class="service-icon" viewBox="0 0 40 40" aria-hidden="true"><path d="M8 30 H32 M10 30 C10 20 15 14 20 14 C25 14 30 20 30 30 M20 10 V14" fill="none" stroke="currentColor"/><circle cx="20" cy="8.5" r="1.6" fill="currentColor"/></svg></div>
       <h3>Hospitality &amp; Guest Care</h3>
       <p>Dedicated guest relations, curated stays, transport, and concierge support so every visiting family feels held, not handled.</p>
     </article>
-    <article class="service-card decor-card" id="decorCard">
-      <div class="service-num">V</div>
+    <article class="service-card decor-card reveal" id="decorCard">
+      <div class="service-top"><span class="service-num">V</span><svg class="service-icon" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 20 C14 12 14 6 20 4 C26 6 26 12 20 20 C28 14 34 14 36 20 C34 26 28 26 20 20 C26 28 26 34 20 36 C14 34 14 28 20 20 C12 26 6 26 4 20 C6 14 12 14 20 20" fill="none" stroke="currentColor"/></svg></div>
       <h3>Décor &amp; Styling</h3>
       <p>Set design, florals, lighting, and table styling crafted to transform any venue into a single cohesive atmosphere.</p>
       <button type="button" class="petal-toggle" id="petalToggle" aria-pressed="true">
@@ -157,25 +185,60 @@
       </button>
       <div class="petals-stage" id="petalsStage" aria-hidden="true"></div>
     </article>
-    <article class="service-card">
-      <div class="service-num">VI</div>
+    <article class="service-card reveal">
+      <div class="service-top"><span class="service-num">VI</span><svg class="service-icon" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="14" fill="none" stroke="currentColor"/><path d="M20 11 V20 L26 24" fill="none" stroke="currentColor"/></svg></div>
       <h3>On-Day Coordination</h3>
       <p>A dedicated team present through every hour of the celebration, so your family is fully present in the moment, not managing it.</p>
     </article>
   </div>
 </section>
 
-<!-- SIGNATURE EXPERIENCES -->
+<!-- ============ PROCESS ============ -->
+<section class="process" id="process">
+  <div class="section-head light center">
+    <p class="eyebrow reveal"><span class="eyebrow-line"></span>The Sehras way<span class="eyebrow-line"></span></p>
+    <h2 class="reveal">From first hello<br><em>to final farewell.</em></h2>
+  </div>
+  <ol class="process-track" id="processTrack">
+    <li class="process-rail" aria-hidden="true"><span id="processFill"></span></li>
+    <li class="process-step reveal">
+      <span class="process-node">01</span>
+      <h3>The Conversation</h3>
+      <p>Shreyas meets your family to understand your story, traditions, guest list, and the feeling you want the day to carry.</p>
+    </li>
+    <li class="process-step reveal">
+      <span class="process-node">02</span>
+      <h3>The Concept</h3>
+      <p>A full design direction — venue, colour story, décor, and a ceremony-by-ceremony plan — shared for your approval.</p>
+    </li>
+    <li class="process-step reveal">
+      <span class="process-node">03</span>
+      <h3>The Craft</h3>
+      <p>Vendors, travel, stays, and timelines are booked and managed by our team, with regular check-ins along the way.</p>
+    </li>
+    <li class="process-step reveal">
+      <span class="process-node">04</span>
+      <h3>The Celebration</h3>
+      <p>We run every hour on the day, so your family is free to be guests at their own wedding.</p>
+    </li>
+  </ol>
+</section>
+
+<!-- ============ SIGNATURE EXPERIENCES ============ -->
 <section class="experiences" id="experiences">
-  <div class="section-head">
-    <p class="eyebrow">Beyond the ceremony</p>
-    <h2>Signature experiences<br>for your guests.</h2>
+  <div class="section-head light split">
+    <div>
+      <p class="eyebrow reveal"><span class="eyebrow-line"></span>Beyond the ceremony</p>
+      <h2 class="reveal">Signature experiences<br><em>for your guests.</em></h2>
+    </div>
+    <p class="section-lede reveal">Little moments that guests talk about long after the last dance.</p>
   </div>
 
   <div class="experience-grid">
-    <article class="experience-card">
+    <article class="experience-card reveal tilt">
       <div class="experience-media">
-        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=1200&auto=format&fit=crop" alt="Guests gathered around a live photo station printing instant pictures at a wedding">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=1200&auto=format&fit=crop" alt="Guests gathered around a live photo station printing instant pictures at a wedding">
+        <span class="experience-index">01</span>
       </div>
       <div class="experience-body">
         <span class="experience-tag">Live Photo Station</span>
@@ -184,9 +247,10 @@
       </div>
     </article>
 
-    <article class="experience-card">
+    <article class="experience-card reveal tilt">
       <div class="experience-media">
-        <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?q=80&w=1200&auto=format&fit=crop" alt="Professional makeup artist applying bridal makeup with a full studio kit">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?q=80&w=1200&auto=format&fit=crop" alt="Professional makeup artist applying bridal makeup with a full studio kit">
+        <span class="experience-index">02</span>
       </div>
       <div class="experience-body">
         <span class="experience-tag">Celebrity Makeup Artist</span>
@@ -195,9 +259,10 @@
       </div>
     </article>
 
-    <article class="experience-card">
+    <article class="experience-card reveal tilt">
       <div class="experience-media">
-        <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=1200&auto=format&fit=crop" alt="Live sketch artist drawing a portrait at an event for a guest">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=1200&auto=format&fit=crop" alt="Live sketch artist drawing a portrait at an event for a guest">
+        <span class="experience-index">03</span>
       </div>
       <div class="experience-body">
         <span class="experience-tag">Live Sketch Artist</span>
@@ -208,26 +273,35 @@
   </div>
 </section>
 
-<!-- ABOUT / OWNER -->
+<!-- ============ ABOUT / OWNER ============ -->
 <section class="about" id="about">
-  <div class="about-media">
-    <div class="owner-photo">
-      <img src="assets/owner-photo.jpeg" alt="Shreyas, Founder of Sehras">
+  <div class="about-media reveal">
+    <div class="owner-frame">
+      <div class="owner-photo parallax" data-speed="0.06">
+        <img src="assets/owner-photo.jpeg" alt="Shreyas, Founder of Sehras">
+      </div>
+    </div>
+    <div class="seal" aria-hidden="true">
+      <svg viewBox="0 0 200 200" class="seal-ring">
+        <defs><path id="sealPath" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+        <text><textPath href="#sealPath">LUXURY WEDDINGS ✦ HOSPITALITY ✦ HELD WITH CARE ✦ </textPath></text>
+      </svg>
+      <img src="assets/sehras-mark.png" alt="" class="seal-mark">
     </div>
   </div>
   <div class="about-content">
-    <p class="eyebrow">The house of Sehras</p>
-    <h2>Led by <em>Shreyas</em></h2>
-    <p class="about-text">
+    <p class="eyebrow reveal"><span class="eyebrow-line"></span>The house of Sehras</p>
+    <h2 class="reveal">Led by <em>Shreyas</em></h2>
+    <p class="about-text reveal">
       Sehras was founded on a simple belief — that luxury is not about excess, but about attention. Every wedding we take on is led personally by Shreyas, who works closely with each family from the very first conversation to the final farewell, ensuring the vision stays true and the experience stays personal.
     </p>
-    <p class="about-text">
+    <p class="about-text reveal">
       With a background rooted in hospitality and an eye for considered design, Shreyas and the Sehras team have built a reputation for weddings that feel effortless to guests — and meticulously cared for behind the scenes.
     </p>
-    <div class="owner-contact">
+    <div class="owner-contact reveal">
       <div>
         <span class="label">Founder &amp; Lead Planner</span>
-        <span class="value">Shreyas</span>
+        <span class="value signature">Shreyas</span>
       </div>
       <div>
         <span class="label">Direct line</span>
@@ -237,310 +311,269 @@
   </div>
 </section>
 
-<!-- STATS -->
-<section class="stats">
-  <div class="stat"><span class="stat-num">120+</span><span class="stat-label">Weddings hosted</span></div>
-  <div class="stat"><span class="stat-num">15+</span><span class="stat-label">Cities &amp; destinations</span></div>
-  <div class="stat"><span class="stat-num">98%</span><span class="stat-label">Guests who'd return for the next event</span></div>
+<!-- ============ STATS ============ -->
+<section class="stats" aria-label="Sehras in numbers">
+  <div class="stats-inner">
+    <div class="stat reveal"><span class="stat-num" data-count="120" data-suffix="+">120+</span><span class="stat-label">Weddings hosted</span></div>
+    <div class="stat reveal"><span class="stat-num" data-count="15" data-suffix="+">15+</span><span class="stat-label">Cities &amp; destinations</span></div>
+    <div class="stat reveal"><span class="stat-num" data-count="98" data-suffix="%">98%</span><span class="stat-label">Guests who'd return for the next event</span></div>
+  </div>
 </section>
 
-<!-- GALLERY -->
+<!-- ============ GALLERY ============ -->
+<!--
+  This gallery is a curated starting point spanning South Indian, Punjabi, Sikh, and Karnataka
+  wedding traditions. Swap these in for real Sehras event photography when available.
+-->
 <section class="gallery" id="gallery">
-  <div class="section-head">
-    <p class="eyebrow">A glimpse</p>
-    <h2>Moments we've<br>had the honour to hold.</h2>
-  </div>
-  <div class="gallery-grid">
-    <div class="gallery-item tall">
-      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop" alt="Wedding mandap decorated with flowers">
+  <div class="section-head split">
+    <div>
+      <p class="eyebrow reveal"><span class="eyebrow-line"></span>A glimpse</p>
+      <h2 class="reveal">Moments we've had<br><em>the honour to hold.</em></h2>
     </div>
-    <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&w=1200&auto=format&fit=crop" alt="Wedding reception table setting">
-    </div>
-    <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?q=80&w=1200&auto=format&fit=crop" alt="Bride and groom hands with mehendi">
-    </div>
-    <div class="gallery-item tall">
-      <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1200&auto=format&fit=crop" alt="Wedding venue lit up in the evening">
-    </div>
-    <div class="gallery-item wide">
-      <img src="https://images.unsplash.com/photo-1525258207990-3a4dbef2f0eb?q=80&w=1600&auto=format&fit=crop" alt="Wedding decor with candles and flowers">
+    <div class="gallery-filters reveal" role="tablist" aria-label="Filter gallery">
+      <button type="button" class="chip is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+      <button type="button" class="chip" data-filter="south" role="tab" aria-selected="false">South Indian</button>
+      <button type="button" class="chip" data-filter="punjabi" role="tab" aria-selected="false">Punjabi &amp; Sikh</button>
+      <button type="button" class="chip" data-filter="karnataka" role="tab" aria-selected="false">Karnataka</button>
+      <button type="button" class="chip" data-filter="details" role="tab" aria-selected="false">Details &amp; Rituals</button>
+      <button type="button" class="chip" data-filter="candid" role="tab" aria-selected="false">Candid</button>
     </div>
   </div>
 
-  <div class="gallery-set">
-    <p class="eyebrow gallery-set-label">Set 01 — South Indian Wedding</p>
-  </div>
-  <div class="gallery-grid">
-    <div class="gallery-item tall">
-      <img src="https://images.unsplash.com/photo-1769500809146-953b80aaa98e?q=80&w=1200&auto=format&fit=crop" alt="South Indian bride in traditional silk saree and temple jewellery">
-    </div>
-    <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1769500810743-5e5dd4fd5848?q=80&w=1200&auto=format&fit=crop" alt="South Indian bride and groom in traditional wedding attire">
-    </div>
-    <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1769500811478-f7d0f896d1a2?q=80&w=1200&auto=format&fit=crop" alt="Bride in traditional South Indian attire with arms outstretched">
-    </div>
-    <div class="gallery-item wide">
-      <img src="https://images.unsplash.com/photo-1769500801394-ca7dbd6cd433?q=80&w=1600&auto=format&fit=crop" alt="South Indian bride adorned with ornate gold temple jewellery">
-    </div>
-    <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1686865604150-43f95d61416c?q=80&w=1200&auto=format&fit=crop" alt="Close-up of bridal hands with traditional henna design">
-    </div>
+  <div class="gallery-grid" id="galleryGrid">
+    <!-- Signature -->
+    <figure class="gallery-item tall" data-set="signature"><img loading="lazy" src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop" alt="Wedding mandap decorated with flowers"></figure>
+    <figure class="gallery-item" data-set="signature"><img loading="lazy" src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&w=1200&auto=format&fit=crop" alt="Wedding reception table setting"></figure>
+    <figure class="gallery-item" data-set="signature"><img loading="lazy" src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?q=80&w=1200&auto=format&fit=crop" alt="Bride and groom hands with mehendi"></figure>
+    <figure class="gallery-item tall" data-set="signature"><img loading="lazy" src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1200&auto=format&fit=crop" alt="Wedding venue lit up in the evening"></figure>
+    <figure class="gallery-item wide" data-set="signature"><img loading="lazy" src="https://images.unsplash.com/photo-1525258207990-3a4dbef2f0eb?q=80&w=1600&auto=format&fit=crop" alt="Wedding decor with candles and flowers"></figure>
+
+    <!-- Set 01 — South Indian -->
+    <figure class="gallery-item tall" data-set="south"><img loading="lazy" src="https://images.unsplash.com/photo-1769500809146-953b80aaa98e?q=80&w=1200&auto=format&fit=crop" alt="South Indian bride in traditional silk saree and temple jewellery"></figure>
+    <figure class="gallery-item" data-set="south"><img loading="lazy" src="https://images.unsplash.com/photo-1769500810743-5e5dd4fd5848?q=80&w=1200&auto=format&fit=crop" alt="South Indian bride and groom in traditional wedding attire"></figure>
+    <figure class="gallery-item" data-set="south"><img loading="lazy" src="https://images.unsplash.com/photo-1769500811478-f7d0f896d1a2?q=80&w=1200&auto=format&fit=crop" alt="Bride in traditional South Indian attire with arms outstretched"></figure>
+    <figure class="gallery-item wide" data-set="south"><img loading="lazy" src="https://images.unsplash.com/photo-1769500801394-ca7dbd6cd433?q=80&w=1600&auto=format&fit=crop" alt="South Indian bride adorned with ornate gold temple jewellery"></figure>
+    <figure class="gallery-item" data-set="south"><img loading="lazy" src="https://images.unsplash.com/photo-1686865604150-43f95d61416c?q=80&w=1200&auto=format&fit=crop" alt="Close-up of bridal hands with traditional henna design"></figure>
+
+    <!-- Set 02 — Punjabi & Sikh -->
+    <figure class="gallery-item tall" data-set="punjabi"><img loading="lazy" src="https://images.unsplash.com/photo-1665960213530-3fb10da1f25e?q=80&w=1200&auto=format&fit=crop" alt="Punjabi bride and groom posing together at their wedding"></figure>
+    <figure class="gallery-item" data-set="punjabi"><img loading="lazy" src="https://images.unsplash.com/photo-1630526720753-aa4e71acf67d?q=80&w=1200&auto=format&fit=crop" alt="Bride in red and white traditional wedding dress outdoors"></figure>
+    <figure class="gallery-item" data-set="punjabi"><img loading="lazy" src="https://images.unsplash.com/photo-1640953146604-2596432ee1eb?q=80&w=1200&auto=format&fit=crop" alt="Couple dressed in traditional Punjabi wedding garb"></figure>
+    <figure class="gallery-item wide" data-set="punjabi"><img loading="lazy" src="https://images.unsplash.com/photo-1665960211002-0ecf92bed0ac?q=80&w=1600&auto=format&fit=crop" alt="Bride and groom in traditional wedding clothing"></figure>
+    <figure class="gallery-item" data-set="punjabi"><img loading="lazy" src="https://images.unsplash.com/photo-1688850771088-ea838f3ed5ce?q=80&w=1200&auto=format&fit=crop" alt="Couple in traditional Indian wedding garb"></figure>
+    <figure class="gallery-item tall" data-set="punjabi"><img loading="lazy" src="https://images.unsplash.com/photo-1644214630472-46b766be71f9?q=80&w=1200&auto=format&fit=crop" alt="Bride and groom walking down the aisle together"></figure>
+    <figure class="gallery-item" data-set="punjabi"><img loading="lazy" src="https://images.unsplash.com/photo-1576470189712-50fe3ec06b04?q=80&w=1200&auto=format&fit=crop" alt="Groom in red and brown sherwani at a Sikh wedding"></figure>
+    <figure class="gallery-item" data-set="punjabi"><img loading="lazy" src="https://images.unsplash.com/photo-1735052709798-2abcc8c0d6e1?q=80&w=1200&auto=format&fit=crop" alt="Groom in a white turban preparing for the wedding ceremony"></figure>
+    <figure class="gallery-item wide" data-set="punjabi"><img loading="lazy" src="https://images.unsplash.com/photo-1652454107511-824c26392845?q=80&w=1600&auto=format&fit=crop" alt="Bride and groom sharing a tender moment at their wedding"></figure>
+    <figure class="gallery-item" data-set="punjabi"><img loading="lazy" src="https://images.unsplash.com/photo-1671531776382-f32dff368120?q=80&w=1200&auto=format&fit=crop" alt="Couple in yellow and gold traditional wedding attire"></figure>
+
+    <!-- Set 03 — Bridal Details & Rituals -->
+    <figure class="gallery-item" data-set="details"><img loading="lazy" src="https://images.unsplash.com/photo-1654156577076-e0350ba86cc1?q=80&w=1200&auto=format&fit=crop" alt="Close-up of hands joined during a traditional wedding ritual"></figure>
+    <figure class="gallery-item tall" data-set="details"><img loading="lazy" src="https://images.unsplash.com/photo-1707576763859-19e8c69450ad?q=80&w=1200&auto=format&fit=crop" alt="Bride in red bridal wear seated by a window"></figure>
+    <figure class="gallery-item" data-set="details"><img loading="lazy" src="https://images.unsplash.com/photo-1650873441621-08dbceadb7b8?q=80&w=1200&auto=format&fit=crop" alt="Traditional bridal necklace with beaded detailing"></figure>
+    <figure class="gallery-item" data-set="details"><img loading="lazy" src="https://images.unsplash.com/photo-1650873442237-3838533a50be?q=80&w=1200&auto=format&fit=crop" alt="Gold chain bridal jewellery with intricate design"></figure>
+    <figure class="gallery-item wide" data-set="details"><img loading="lazy" src="https://images.unsplash.com/photo-1660455559502-8f71b47443c4?q=80&w=1600&auto=format&fit=crop" alt="Guests seated together at a wedding celebration"></figure>
+    <figure class="gallery-item" data-set="details"><img loading="lazy" src="https://images.unsplash.com/photo-1650873442159-65dda3860134?q=80&w=1200&auto=format&fit=crop" alt="Gold and silver bridal necklace detail"></figure>
+    <figure class="gallery-item" data-set="details"><img loading="lazy" src="https://images.unsplash.com/photo-1644214630464-421b5386f65a?q=80&w=1200&auto=format&fit=crop" alt="Bride and groom sharing a quiet moment outdoors"></figure>
+
+    <!-- Set 04 — Karnataka -->
+    <figure class="gallery-item tall" data-set="karnataka"><img loading="lazy" src="https://images.unsplash.com/photo-1756376748107-12c98ec6b969?q=80&w=1200&auto=format&fit=crop" alt="Kannada bride and groom in traditional silk saree and sherwani"></figure>
+    <figure class="gallery-item" data-set="karnataka"><img loading="lazy" src="https://images.unsplash.com/photo-1654764746590-841871176bc0?q=80&w=1200&auto=format&fit=crop" alt="Karnataka bride in red and gold Mysore silk bridal saree"></figure>
+    <figure class="gallery-item" data-set="karnataka"><img loading="lazy" src="https://images.unsplash.com/photo-1727430228383-aa1fb59db8bf?q=80&w=1200&auto=format&fit=crop" alt="Bride posing in traditional Karnataka silk saree and temple jewellery"></figure>
+    <figure class="gallery-item wide" data-set="karnataka"><img loading="lazy" src="https://images.unsplash.com/photo-1756483482418-3f3e4c13f9b0?q=80&w=1600&auto=format&fit=crop" alt="Two women in traditional silk sarees at a Karnataka wedding archway"></figure>
+    <figure class="gallery-item" data-set="karnataka"><img loading="lazy" src="https://images.unsplash.com/photo-1726981448126-c7fc9237cdb5?q=80&w=1200&auto=format&fit=crop" alt="Karnataka bride in gold bridal drape with veil"></figure>
+    <figure class="gallery-item" data-set="karnataka"><img loading="lazy" src="https://images.unsplash.com/photo-1654157085616-cd80ec5fca2f?q=80&w=1200&auto=format&fit=crop" alt="Traditional Karnataka wedding feast served on a banana leaf"></figure>
+    <figure class="gallery-item tall" data-set="karnataka"><img loading="lazy" src="https://images.unsplash.com/photo-1688789913221-071a44294edf?q=80&w=1200&auto=format&fit=crop" alt="Bride in a red and green traditional Karnataka wedding saree"></figure>
+    <figure class="gallery-item" data-set="karnataka"><img loading="lazy" src="https://images.unsplash.com/photo-1650873441618-7b754482bddd?q=80&w=1200&auto=format&fit=crop" alt="Detail of a gold and silver Karnataka bridal saree drape"></figure>
+    <figure class="gallery-item" data-set="karnataka"><img loading="lazy" src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=1200&auto=format&fit=crop" alt="Bride in a red and blue traditional Karnataka wedding saree"></figure>
+
+    <!-- Set 05 — Candid -->
+    <figure class="gallery-item" data-set="candid"><img loading="lazy" src="https://images.unsplash.com/photo-1606800052052-a08af7148866?q=80&w=1200&auto=format&fit=crop" alt="Natural candid moment of family embracing at a celebration"></figure>
+    <figure class="gallery-item wide" data-set="candid"><img loading="lazy" src="https://images.unsplash.com/photo-1583939411023-14a8db7b8c88?q=80&w=1600&auto=format&fit=crop" alt="Guests dancing candidly at a wedding celebration"></figure>
+    <figure class="gallery-item" data-set="candid"><img loading="lazy" src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=1200&auto=format&fit=crop" alt="Natural candid photo of children playing at a wedding event"></figure>
   </div>
 
-  <div class="gallery-set">
-    <p class="eyebrow gallery-set-label">Set 02 — Punjabi &amp; Sikh Wedding</p>
-  </div>
-  <div class="gallery-grid">
-    <div class="gallery-item tall">
-      <img src="https://images.unsplash.com/photo-1665960213530-3fb10da1f25e?q=80&w=1200&auto=format&fit=crop" alt="Punjabi bride and groom posing together at their wedding">
-    </div>
-    <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1630526720753-aa4e71acf67d?q=80&w=1200&auto=format&fit=crop" alt="Bride in red and white traditional wedding dress outdoors">
-    </div>
-    <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1640953146604-2596432ee1eb?q=80&w=1200&auto=format&fit=crop" alt="Couple dressed in traditional Punjabi wedding garb">
-    </div>
-    <div class="gallery-item wide">
-      <img src="https://images.unsplash.com/photo-1665960211002-0ecf92bed0ac?q=80&w=1600&auto=format&fit=crop" alt="Bride and groom in traditional wedding clothing">
-    </div>
-    <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1688850771088-ea838f3ed5ce?q=80&w=1200&auto=format&fit=crop" alt="Couple in traditional Indian wedding garb">
-    </div>
-    <div class="gallery-item tall">
-      <img src="https://images.unsplash.com/photo-1644214630472-46b766be71f9?q=80&w=1200&auto=format&fit=crop" alt="Bride and groom walking down the aisle together">
-    </div>
-    <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1576470189712-50fe3ec06b04?q=80&w=1200&auto=format&fit=crop" alt="Groom in red and brown sherwani at a Sikh wedding">
-    </div>
-    <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1735052709798-2abcc8c0d6e1?q=80&w=1200&auto=format&fit=crop" alt="Groom in a white turban preparing for the wedding ceremony">
-    </div>
-    <div class="gallery-item wide">
-      <img src="https://images.unsplash.com/photo-1652454107511-824c26392845?q=80&w=1600&auto=format&fit=crop" alt="Bride and groom sharing a tender moment at their wedding">
-    </div>
-    <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1671531776382-f32dff368120?q=80&w=1200&auto=format&fit=crop" alt="Couple in yellow and gold traditional wedding attire">
-    </div>
-  </div>
-
-  <div class="gallery-set">
-    <p class="eyebrow gallery-set-label">Set 03 — Bridal Details &amp; Rituals</p>
-  </div>
-  <div class="gallery-grid">
-    <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1654156577076-e0350ba86cc1?q=80&w=1200&auto=format&fit=crop" alt="Close-up of hands joined during a traditional wedding ritual">
-    </div>
-    <div class="gallery-item tall">
-      <img src="https://images.unsplash.com/photo-1707576763859-19e8c69450ad?q=80&w=1200&auto=format&fit=crop" alt="Bride in red bridal wear seated by a window">
-    </div>
-    <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1650873441621-08dbceadb7b8?q=80&w=1200&auto=format&fit=crop" alt="Traditional bridal necklace with beaded detailing">
-    </div>
-    <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1650873442237-3838533a50be?q=80&w=1200&auto=format&fit=crop" alt="Gold chain bridal jewellery with intricate design">
-    </div>
-    <div class="gallery-item wide">
-      <img src="https://images.unsplash.com/photo-1660455559502-8f71b47443c4?q=80&w=1600&auto=format&fit=crop" alt="Guests seated together at a wedding celebration">
-    </div>
-    <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1650873442159-65dda3860134?q=80&w=1200&auto=format&fit=crop" alt="Gold and silver bridal necklace detail">
-    </div>
-    <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1644214630464-421b5386f65a?q=80&w=1200&auto=format&fit=crop" alt="Bride and groom sharing a quiet moment outdoors">
-    </div>
-  </div>
-
-  <div class="gallery-set">
-    <p class="eyebrow gallery-set-label">Set 04 — Karnataka Wedding</p>
-  </div>
-  <div class="gallery-grid">
-    <div class="gallery-item tall">
-      <img src="https://images.unsplash.com/photo-1756376748107-12c98ec6b969?q=80&w=1200&auto=format&fit=crop" alt="Kannada bride and groom in traditional silk saree and sherwani">
-    </div>
-    <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1654764746590-841871176bc0?q=80&w=1200&auto=format&fit=crop" alt="Karnataka bride in red and gold Mysore silk bridal saree">
-    </div>
-    <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1727430228383-aa1fb59db8bf?q=80&w=1200&auto=format&fit=crop" alt="Bride posing in traditional Karnataka silk saree and temple jewellery">
-    </div>
-    <div class="gallery-item wide">
-      <img src="https://images.unsplash.com/photo-1756483482418-3f3e4c13f9b0?q=80&w=1600&auto=format&fit=crop" alt="Two women in traditional silk sarees at a Karnataka wedding archway">
-    </div>
-    <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1726981448126-c7fc9237cdb5?q=80&w=1200&auto=format&fit=crop" alt="Karnataka bride in gold bridal drape with veil"></div>
-    <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1654157085616-cd80ec5fca2f?q=80&w=1200&auto=format&fit=crop" alt="Traditional Karnataka wedding feast served on a banana leaf">
-    </div>
-    <div class="gallery-item tall">
-      <img src="https://images.unsplash.com/photo-1688789913221-071a44294edf?q=80&w=1200&auto=format&fit=crop" alt="Bride in a red and green traditional Karnataka wedding saree">
-    </div>
-    <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1650873441618-7b754482bddd?q=80&w=1200&auto=format&fit=crop" alt="Detail of a gold and silver Karnataka bridal saree drape">
-    </div>
-    <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=1200&auto=format&fit=crop" alt="Bride in a red and blue traditional Karnataka wedding saree">
-    </div>
-  </div>
-
-  <div class="gallery-set">
-    <p class="eyebrow gallery-set-label">Set 05 — Candid &amp; Natural Moments</p>
-  </div>
-  <div class="gallery-grid">
-    <div class="gallery-item tall">
-      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop" alt="Candid natural photo of guests laughing together at a wedding">
-    </div>
-    <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?q=80&w=1200&auto=format&fit=crop" alt="Natural candid moment of family embracing at a celebration">
-    </div>
-    <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1200&auto=format&fit=crop" alt="Candid unposed shot of a couple sharing a quiet laugh">
-    </div>
-    <div class="gallery-item wide">
-      <img src="https://images.unsplash.com/photo-1583939411023-14a8db7b8c88?q=80&w=1600&auto=format&fit=crop" alt="Guests dancing candidly at a wedding celebration">
-    </div>
-    <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=1200&auto=format&fit=crop" alt="Natural candid photo of children playing at a wedding event">
-    </div>
+  <div class="gallery-more">
+    <button type="button" class="btn btn-outline" id="galleryMore">View more moments</button>
   </div>
 </section>
 
-<p style="text-align:center; opacity:0.55; font-size:0.82rem; max-width:640px; margin:-60px auto 80px; padding:0 24px;">
-  This gallery is a curated starting point spanning South Indian, Punjabi, Sikh, and Karnataka wedding traditions. Send over your own event photography any time and we'll swap these in so the gallery reflects real Sehras weddings.
-</p>
-
-<!-- DESIGNER / BRIDAL FASHION & JEWELLERY -->
+<!-- ============ DESIGNER ============ -->
 <section class="designer" id="designer">
-  <div class="designer-media">
-    <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1800&auto=format&fit=crop" alt="" />
+  <div class="designer-media parallax" data-speed="0.12">
+    <img loading="lazy" src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1800&auto=format&fit=crop" alt="">
   </div>
   <div class="designer-overlay"></div>
   <div class="designer-inner">
-    <div class="section-head light">
-      <p class="eyebrow">In partnership</p>
-      <h2>Bridal fashion,<br>jewellery &amp; artistry.</h2>
-      <p class="designer-intro">Curated with our partner designer <strong>Varshitha</strong> — handcrafted sarees, blouse and saree art, bangles, and bridal jewellery in every metal, made to complete your look.</p>
+    <div class="section-head light center">
+      <p class="eyebrow reveal"><span class="eyebrow-line"></span>In partnership<span class="eyebrow-line"></span></p>
+      <h2 class="reveal">Bridal fashion,<br><em>jewellery &amp; artistry.</em></h2>
+      <p class="designer-intro reveal">Curated with our partner designer <strong>Varshitha</strong> — handcrafted sarees, blouse and saree art, bangles, and bridal jewellery in every metal, made to complete your look.</p>
     </div>
 
     <div class="designer-grid">
-      <article class="designer-card">
+      <article class="designer-card reveal">
         <div class="designer-card-media">
-          <img src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?q=80&w=1000&auto=format&fit=crop" alt="Bridal saree draped with intricate gold border work">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?q=80&w=1000&auto=format&fit=crop" alt="Bridal saree draped with intricate gold border work">
         </div>
-        <h3>Sarees &amp; Saree Art</h3>
-        <p>Hand-picked silk and designer sarees, plus hand-painted saree and blouse art for a look that's entirely your own.</p>
+        <div class="designer-card-body">
+          <h3>Sarees &amp; Saree Art</h3>
+          <p>Hand-picked silk and designer sarees, plus hand-painted saree and blouse art for a look that's entirely your own.</p>
+        </div>
       </article>
-      <article class="designer-card">
+      <article class="designer-card reveal">
         <div class="designer-card-media">
-          <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=1000&auto=format&fit=crop" alt="Gold bangles and bridal bracelets on display">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=1000&auto=format&fit=crop" alt="Gold bangles and bridal bracelets on display">
         </div>
-        <h3>Bangles &amp; Bridal Sets</h3>
-        <p>Bangles, necklaces, and full jewellery sets across gold, silver, and antique metal finishes for every ceremony.</p>
+        <div class="designer-card-body">
+          <h3>Bangles &amp; Bridal Sets</h3>
+          <p>Bangles, necklaces, and full jewellery sets across gold, silver, and antique metal finishes for every ceremony.</p>
+        </div>
       </article>
-      <article class="designer-card">
+      <article class="designer-card reveal">
         <div class="designer-card-media">
-          <img src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=1000&auto=format&fit=crop" alt="Handcrafted ornaments and artistic jewellery pieces">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=1000&auto=format&fit=crop" alt="Handcrafted ornaments and artistic jewellery pieces">
         </div>
-        <h3>Handcrafted Ornaments</h3>
-        <p>Hair pins, adornments, and artistic creations, handcrafted in small batches — no two pieces exactly alike.</p>
+        <div class="designer-card-body">
+          <h3>Handcrafted Ornaments</h3>
+          <p>Hair pins, adornments, and artistic creations, handcrafted in small batches — no two pieces exactly alike.</p>
+        </div>
       </article>
     </div>
 
-    <div class="designer-contact">
+    <div class="designer-contact reveal">
       <div class="designer-contact-info">
         <span class="label">Designer</span>
         <span class="value">Varshitha</span>
       </div>
       <div class="designer-contact-actions">
-        <a href="tel:+918088924308" class="btn btn-primary">Call +91 80889 24308</a>
-        <a href="https://wa.me/918088924308?text=Hi%20Varshitha%2C%20I%27m%20interested%20in%20your%20sarees%20and%20jewellery%20collection%20via%20Sehras." target="_blank" rel="noopener" class="btn btn-ghost btn-ghost-light">WhatsApp Varshitha</a>
+        <a href="tel:+918088924308" class="btn btn-gold magnetic">Call +91 80889 24308</a>
+        <a href="https://wa.me/918088924308?text=Hi%20Varshitha%2C%20I%27m%20interested%20in%20your%20sarees%20and%20jewellery%20collection%20via%20Sehras." target="_blank" rel="noopener" class="btn btn-outline-light magnetic">WhatsApp Varshitha</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
+<!-- ============ TESTIMONIALS ============ -->
 <section class="testimonials" id="testimonials">
-  <div class="testimonials-media">
-    <img src="https://images.unsplash.com/photo-1525258207990-3a4dbef2f0eb?q=80&w=1800&auto=format&fit=crop" alt="" />
+  <div class="section-head light center">
+    <p class="eyebrow reveal"><span class="eyebrow-line"></span>In their words<span class="eyebrow-line"></span></p>
+    <h2 class="reveal">Stories from<br><em>families we've hosted.</em></h2>
   </div>
-  <div class="section-head light">
-    <p class="eyebrow">In their words</p>
-    <h2>Stories from<br>families we've hosted.</h2>
-  </div>
-  <div class="testimonial-track">
-    <article class="testimonial glass-card">
-      <p class="quote">"Shreyas and his team didn't just plan our wedding — they understood our family before they touched a single detail. Every guest felt looked after."</p>
-      <p class="author">— Ananya &amp; Rohit, Bengaluru</p>
-    </article>
-    <article class="testimonial glass-card">
-      <p class="quote">"We hosted 400 guests across three cities and never once felt the chaos. Sehras carried it so we didn't have to."</p>
-      <p class="author">— The Hegde Family, Coorg</p>
-    </article>
-    <article class="testimonial glass-card">
-      <p class="quote">"The kind of hospitality you remember for years — warm, precise, and never overbearing. Worth every rupee."</p>
-      <p class="author">— Priya &amp; Karthik, Goa</p>
-    </article>
-  </div>
-</section>
 
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="contact-inner">
-    <p class="eyebrow">Let's begin</p>
-    <h2>Tell us about<br>your celebration.</h2>
-    <p class="contact-sub">Share a few details and Shreyas will personally get in touch within 24 hours.</p>
-
-    <form class="contact-form" id="enquiryForm">
-      <div class="form-row">
-        <div class="field">
-          <label for="name">Your name</label>
-          <input type="text" id="name" name="name" required placeholder="Full name">
-        </div>
-        <div class="field">
-          <label for="phone">Phone number</label>
-          <input type="tel" id="phone" name="phone" required placeholder="+91">
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="field">
-          <label for="date">Event date</label>
-          <input type="text" id="date" name="date" placeholder="DD / MM / YYYY">
-        </div>
-        <div class="field">
-          <label for="city">City / destination</label>
-          <input type="text" id="city" name="city" placeholder="Where will it be held?">
-        </div>
-      </div>
-      <div class="field">
-        <label for="message">Tell us a little about your vision</label>
-        <textarea id="message" name="message" rows="4" placeholder="Guest count, style, anything on your mind..."></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary btn-wide">Send enquiry</button>
-      <p class="form-note" id="formNote"></p>
-    </form>
-
-    <div class="direct-contact">
-      <div>
-        <span class="label">Call or WhatsApp</span>
-        <a href="tel:+919353127120" class="value link">+91 93531 27120</a>
-      </div>
-      <div>
-        <span class="label">Studio</span>
-        <span class="value">Bengaluru, Karnataka</span>
-      </div>
+  <div class="t-carousel reveal" id="tCarousel" aria-roledescription="carousel">
+    <span class="t-mark" aria-hidden="true">“</span>
+    <div class="t-viewport">
+      <article class="t-slide is-active" aria-roledescription="slide">
+        <p class="quote">Shreyas and his team didn't just plan our wedding — they understood our family before they touched a single detail. Every guest felt looked after.</p>
+        <p class="author">Ananya &amp; Rohit <span>· Bengaluru</span></p>
+      </article>
+      <article class="t-slide" aria-roledescription="slide">
+        <p class="quote">We hosted 400 guests across three cities and never once felt the chaos. Sehras carried it so we didn't have to.</p>
+        <p class="author">The Hegde Family <span>· Coorg</span></p>
+      </article>
+      <article class="t-slide" aria-roledescription="slide">
+        <p class="quote">The kind of hospitality you remember for years — warm, precise, and never overbearing. Worth every rupee.</p>
+        <p class="author">Priya &amp; Karthik <span>· Goa</span></p>
+      </article>
+    </div>
+    <div class="t-controls">
+      <button type="button" class="t-arrow" id="tPrev" aria-label="Previous story">←</button>
+      <div class="t-dots" id="tDots"></div>
+      <button type="button" class="t-arrow" id="tNext" aria-label="Next story">→</button>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="contact-wrap">
+    <aside class="contact-aside reveal">
+      <div class="contact-aside-media">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?q=80&w=1200&auto=format&fit=crop" alt="">
+      </div>
+      <div class="contact-aside-body">
+        <img src="assets/sehras-mark.png" alt="" class="contact-mark" aria-hidden="true">
+        <p class="eyebrow light-eyebrow">Speak to Shreyas</p>
+        <p class="contact-aside-quote">“The best weddings begin with a long, unhurried conversation.”</p>
+        <div class="direct-contact">
+          <div>
+            <span class="label">Call or WhatsApp</span>
+            <a href="tel:+919353127120" class="value link">+91 93531 27120</a>
+          </div>
+          <div>
+            <span class="label">Studio</span>
+            <span class="value">Bengaluru, Karnataka</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="contact-main">
+      <p class="eyebrow reveal"><span class="eyebrow-line"></span>Let's begin</p>
+      <h2 class="reveal">Tell us about<br><em>your celebration.</em></h2>
+      <p class="contact-sub reveal">Share a few details and Shreyas will personally get in touch within 24 hours.</p>
+
+      <form class="contact-form reveal" id="enquiryForm" novalidate>
+        <fieldset class="field">
+          <legend>What are you celebrating?</legend>
+          <div class="chip-group" id="eventChips">
+            <label class="chip"><input type="radio" name="event" value="Wedding" checked><span>Wedding</span></label>
+            <label class="chip"><input type="radio" name="event" value="Destination wedding"><span>Destination</span></label>
+            <label class="chip"><input type="radio" name="event" value="Sangeet / Mehendi / Haldi"><span>Sangeet &amp; Mehendi</span></label>
+            <label class="chip"><input type="radio" name="event" value="Reception"><span>Reception</span></label>
+            <label class="chip"><input type="radio" name="event" value="Engagement"><span>Engagement</span></label>
+          </div>
+        </fieldset>
+        <div class="form-row">
+          <div class="field float">
+            <input type="text" id="name" name="name" required placeholder=" " autocomplete="name">
+            <label for="name">Your name</label>
+          </div>
+          <div class="field float">
+            <input type="tel" id="phone" name="phone" required placeholder=" " autocomplete="tel">
+            <label for="phone">Phone number</label>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field float">
+            <input type="date" id="date" name="date" placeholder=" " class="has-value">
+            <label for="date">Event date</label>
+          </div>
+          <div class="field float">
+            <input type="text" id="city" name="city" placeholder=" ">
+            <label for="city">City / destination</label>
+          </div>
+        </div>
+        <div class="field float">
+          <select id="guests" name="guests" class="has-value">
+            <option value="">Select</option>
+            <option>Under 100</option>
+            <option>100 – 250</option>
+            <option>250 – 500</option>
+            <option>500 – 1000</option>
+            <option>1000+</option>
+          </select>
+          <label for="guests">Expected guests</label>
+        </div>
+        <div class="field float">
+          <textarea id="message" name="message" rows="3" placeholder=" "></textarea>
+          <label for="message">Tell us a little about your vision</label>
+        </div>
+        <button type="submit" class="btn btn-gold btn-wide magnetic">Send enquiry via WhatsApp <span class="btn-arrow">→</span></button>
+        <p class="form-note" id="formNote" role="status"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
 <footer class="footer">
   <div class="footer-inner">
-    <a href="#top" class="logo">
-      <img class="logo-mark" src="assets/sehras-mark.png" alt="" aria-hidden="true">
-      <span class="logo-word">Sehras</span>
-    </a>
+    <img src="assets/sehras-logo-full.png" alt="Sehras" class="footer-logo">
     <p class="footer-tag">Luxury weddings &amp; hospitality, held with care.</p>
     <div class="footer-links">
       <a href="#services">Services</a>
@@ -551,15 +584,27 @@
       <a href="#contact">Enquire</a>
       <a href="tel:+919353127120">+91 93531 27120</a>
     </div>
-    <p class="footer-copy">© 2026 Sehras. All rights reserved.</p>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Sehras. All rights reserved.</p>
+      <a href="#top" class="footer-top">Back to top ↑</a>
+    </div>
   </div>
 </footer>
 
-<!-- PHOTO LIGHTBOX -->
-<div class="lightbox" id="lightbox" aria-hidden="true">
+<!-- ============ FLOATING WHATSAPP ============ -->
+<a class="wa-fab" href="https://wa.me/919353127120?text=Hello%20Sehras%2C%20I%27d%20like%20to%20enquire%20about%20a%20wedding." target="_blank" rel="noopener" aria-label="Chat with Sehras on WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.04 3C9.4 3 4 8.36 4 14.96c0 2.1.56 4.16 1.62 5.97L4 29l8.3-1.6a12.1 12.1 0 0 0 3.74.6C22.68 28 28 22.64 28 16.04 28 9.4 22.68 3 16.04 3Zm0 22.86c-1.18 0-2.34-.2-3.44-.6l-.5-.18-4.92.95.96-4.78-.2-.5a9.78 9.78 0 0 1-1.5-5.2c0-5.4 4.4-9.8 9.6-9.8 5.4 0 9.8 4.4 9.8 9.8 0 5.6-4.4 10.3-9.8 10.3Zm5.38-7.3c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47a8.9 8.9 0 0 1-1.65-2.05c-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.57-.48-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.48.71.31 1.27.5 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.75-.72 2-1.4.25-.7.25-1.28.17-1.4-.07-.13-.27-.2-.57-.35Z"/></svg>
+  <span>Chat with us</span>
+</a>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Photo viewer">
   <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
   <button type="button" class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous photo">&#8249;</button>
-  <img class="lightbox-img" id="lightboxImg" src="" alt="">
+  <figure class="lightbox-figure">
+    <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    <figcaption class="lightbox-caption" id="lightboxCaption"></figcaption>
+  </figure>
   <button type="button" class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next photo">&#8250;</button>
   <p class="lightbox-counter" id="lightboxCounter"></p>
 </div>
