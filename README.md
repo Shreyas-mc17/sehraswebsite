@@ -16,7 +16,7 @@ npm start                       # preview ./out locally
 
 | Variable | Purpose |
 | --- | --- |
-| `NEXT_PUBLIC_SITE_URL` | Live domain, e.g. `https://www.sehras.in`. Used for canonical URLs, sitemap, robots, Open Graph and JSON-LD. **Set this before deploying.** |
+| `NEXT_PUBLIC_SITE_URL` | Live domain, e.g. `https://www.sehras.com`. Used for canonical URLs, sitemap, robots, Open Graph and JSON-LD. **Set this before deploying.** |
 | `NEXT_PUBLIC_GA_ID` | Google Analytics 4 Measurement ID (`G-XXXXXXXXXX`). Leave empty to disable analytics. |
 
 ## Editing content
