@@ -11,6 +11,8 @@ export const site = {
     'Sehras plans, designs and hosts weddings, birthdays, corporate events, baby showers, house warmings and naming ceremonies in Bengaluru and across India — led personally by founder Shreyas.',
   url: (process.env.NEXT_PUBLIC_SITE_URL || 'https://www.sehras.com').replace(/\/$/, ''),
   gaId: process.env.NEXT_PUBLIC_GA_ID || '',
+  // Google Search Console HTML-tag verification for https://www.sehras.com/ — keep it, or the property becomes unverified.
+  googleVerification: 'FlO25o9sEmAgK7l9L_QFmeG0_XFWUuY0axW0yYWeDtc',
   locale: 'en_IN',
   founder: 'Shreyas',
   phone: '+919353127120',
