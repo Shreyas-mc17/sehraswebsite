@@ -7,8 +7,13 @@ import CtaBand from '@/components/CtaBand';
 import CeremonyRail from '@/components/CeremonyRail';
 import JsonLd from '@/components/JsonLd';
 import { Eyebrow, ServiceIcon } from '@/components/Icons';
-import { designerItems, experiences, faqs, heroSlides, occasions, otherOccasions, processSteps, services, site, stats, waLink } from '@/lib/site';
+import { celebrations, designerItems, experiences, faqs, heroSlides, occasions, otherOccasions, processSteps, services, site, stats, waLink } from '@/lib/site';
 import { faqSchema } from '@/lib/schema';
+
+const occasionHref = (event: string) => {
+  const page = celebrations.find((c) => c.event === event);
+  return page ? `/celebrations/${page.slug}/` : `/contact/?event=${encodeURIComponent(event)}`;
+};
 
 export default function Home() {
   return (
@@ -22,6 +27,7 @@ export default function Home() {
         <div className="hero-content">
           <p className="eyebrow hero-eyebrow"><span>Wedding &amp; event planners<span className="hide-sm"> · Bengaluru</span></span></p>
           <h1 className="hero-title">
+            <span className="sr-only">Sehras — wedding &amp; event planners in Bengaluru. </span>
             <span className="line"><span>Celebrations,</span></span>
             <span className="line"><span>planned with <em>care.</em></span></span>
           </h1>
@@ -100,7 +106,7 @@ export default function Home() {
                 <ul className="occasion-tags" aria-label={`${o.title} includes`}>
                   {o.tags.map((t) => <li key={t}>{t}</li>)}
                 </ul>
-                <Link href={`/contact/?event=${encodeURIComponent(o.event)}`} className="occasion-link">
+                <Link href={occasionHref(o.event)} className="occasion-link">
                   Plan your {o.cta} <span className="btn-arrow">→</span>
                 </Link>
               </li>

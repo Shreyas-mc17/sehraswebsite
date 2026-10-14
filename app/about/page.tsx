@@ -9,10 +9,10 @@ import { breadcrumbSchema } from '@/lib/schema';
 const description = `Meet ${site.founder}, founder of Sehras — wedding and event planners in ${site.city} who lead every celebration personally, from the first conversation to the final goodbye.`;
 
 export const metadata: Metadata = {
-  title: 'About Us',
+  title: { absolute: `About ${site.name} — Wedding & Event Planner in ${site.city}` },
   description,
   alternates: { canonical: '/about/' },
-  openGraph: { type: 'website', url: '/about/', title: `About Us | ${site.name}`, description },
+  openGraph: { type: 'website', url: '/about/', title: `About ${site.name} — Wedding & Event Planner in ${site.city}`, description },
 };
 
 export default function AboutPage() {

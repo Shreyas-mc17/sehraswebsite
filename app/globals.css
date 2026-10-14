@@ -945,7 +945,7 @@ blockquote, figure{ margin:0; }
 /* ----- footer ----- */
 .footer-inner{ text-align:left; }
 .footer-brand{ text-align:center; margin-bottom: 60px; }
-.footer-cols{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 40px; padding: 48px 0 56px; }
+.footer-cols{ display:grid; grid-template-columns: repeat(4, 1fr); gap: 40px; padding: 48px 0 56px; }
 .footer-cols .label{ color: var(--gold-light); margin-bottom: 18px; }
 .footer-cols ul{ list-style:none; display:grid; gap: 10px; }
 .footer-cols a:not(.btn){ opacity:.75; font-size:.95rem; transition: color .3s, opacity .3s; }

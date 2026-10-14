@@ -243,6 +243,158 @@ export const services: Service[] = [
   },
 ];
 
+// Landing pages for non-wedding occasions, served at /celebrations/[slug]/.
+// `event` must match an option in EnquiryForm so the page's form preselects it.
+export type Celebration = Omit<Service, 'num'> & {
+  event: string;
+  seoTitle: string;
+};
+
+export const celebrations: Celebration[] = [
+  {
+    slug: 'birthday-party-planner',
+    event: 'Birthday',
+    title: 'Birthday Parties',
+    seoTitle: `Birthday Party Planner in ${site.city}`,
+    short: 'First birthdays to milestone sixtieths — themed décor, entertainment and catering, planned and hosted end to end.',
+    metaDescription:
+      'Birthday party planner in Bengaluru — first birthdays, kids’ themed parties, surprise parties and milestone 50th & 60th celebrations with décor, catering and entertainment by Sehras.',
+    image: img('1530103862676-de8c9debad1d', 1600),
+    icon: 'M8 34 H32 M10 34 V22 H30 V34 M10 27 C13 29 15 29 17 27 S22 25 24 27 S28 29 30 27 M20 22 V16 M20 9 C18 11 18 13 20 14 C22 13 22 11 20 9 Z',
+    intro: [
+      'A birthday should feel like the person it celebrates. We start with who it is for — a one-year-old’s first party, a teenager’s theme night or a parent’s sixtieth — and build the décor, food and entertainment around them.',
+      'Our team handles the venue, set-up, vendors and timings in Bengaluru, at home or at a hall, so the family can spend the day with their guests instead of managing it.',
+    ],
+    includes: [
+      'Theme concept, colour palette and décor',
+      'Balloon, floral and backdrop styling',
+      'Cake, catering and return gifts',
+      'Entertainers, games, magicians and anchors',
+      'Photography, live photo station and sketch artist',
+      'Venue booking or home set-up and pack-down',
+    ],
+    idealFor: 'First birthdays, kids’ themed parties, surprise parties and milestone birthdays like the 50th, 60th and 75th.',
+    faqs: [
+      { q: 'Do you plan first birthday parties?', a: 'Yes — first birthdays are one of our most-requested celebrations, with themed décor, a cake-cutting set-up, games for children and a comfortable space for elders.' },
+      { q: 'Can you set up a birthday party at home?', a: 'Yes. We style homes, apartment clubhouses, terraces and banquet halls across Bengaluru, and handle set-up and clean-up.' },
+      { q: 'How early should we book a birthday party?', a: 'Two to four weeks is usually enough. For large milestone birthdays or peak-season dates, book a little earlier.' },
+    ],
+  },
+  {
+    slug: 'corporate-event-planner',
+    event: 'Corporate event',
+    title: 'Corporate Events',
+    seoTitle: `Corporate Event Planner in ${site.city}`,
+    short: 'Conferences, product launches, offsites and award nights, run to the minute and presented with polish.',
+    metaDescription:
+      'Corporate event planner in Bengaluru — conferences, product launches, offsites, annual days, award nights and team celebrations, planned and run by Sehras.',
+    image: img('1505373877841-8d25f7d46678', 1600),
+    icon: 'M6 14 H34 V33 H6 Z M15 14 V9 H25 V14 M6 22 H34 M18 22 V26 H22 V22',
+    intro: [
+      'Corporate events carry your brand in front of your people, partners and customers. We plan them with the same attention we give to weddings — clear timelines, sharp production and hospitality that makes every guest feel looked after.',
+      'From the venue and stage to registrations, AV, catering and run-of-show, one team manages the details and keeps your organisers updated at every step.',
+    ],
+    includes: [
+      'Venue sourcing and contracting',
+      'Stage, branding and AV production',
+      'Guest registration and hospitality desk',
+      'Catering, menus and dietary planning',
+      'Entertainment, anchors and award-night shows',
+      'Run-of-show and on-day coordination',
+    ],
+    idealFor: 'Conferences, product launches, annual days, offsites, award nights and festive office celebrations.',
+    faqs: [
+      { q: 'What kinds of corporate events do you plan?', a: 'Conferences, product launches, annual days, offsites, award nights, client dinners and festive celebrations at the office.' },
+      { q: 'Can you work within our company’s budget and approvals?', a: 'Yes. We share an itemised proposal and quote, and work with your procurement and admin teams on approvals and invoicing.' },
+      { q: 'Do you plan events outside Bengaluru?', a: 'Yes. We plan offsites and events across India, and our own team travels to run each one.' },
+    ],
+  },
+  {
+    slug: 'baby-shower-decoration',
+    event: 'Baby shower',
+    title: 'Baby Showers',
+    seoTitle: `Baby Shower & Seemantham Decoration in ${site.city}`,
+    short: 'Seemantham, godh bharai or a modern shower — soft styling, rituals and games for the whole family.',
+    metaDescription:
+      'Baby shower decoration and planning in Bengaluru — seemantham, valaikappu, godh bharai and modern baby showers with décor, rituals, catering and games by Sehras.',
+    image: img('1555252333-9f8e92e65df9', 1600),
+    icon: 'M12 6 A8 8 0 1 0 28 6 M8 18 H32 C32 26 27 30 20 30 C13 30 8 26 8 18 Z M13 34 A2 2 0 1 0 13.1 34 M27 34 A2 2 0 1 0 27.1 34',
+    intro: [
+      'A baby shower is a blessing for the mother-to-be, surrounded by family. Whether it is a traditional seemantham or valaikappu, a godh bharai or a modern shower, we plan it around your family’s customs.',
+      'We take care of the décor, the seating for the mother, ritual items, food and games, with comfort and calm kept front of mind throughout the day.',
+    ],
+    includes: [
+      'Floral, pastel and themed décor',
+      'Comfortable seating and stage for the mother-to-be',
+      'Ritual and puja arrangements',
+      'Catering and traditional menus',
+      'Games, activities and return gifts',
+      'Photography and live photo station',
+    ],
+    idealFor: 'Seemantham, valaikappu, godh bharai and modern baby showers at home or at a venue.',
+    faqs: [
+      { q: 'Do you arrange traditional seemantham and valaikappu ceremonies?', a: 'Yes. We arrange the décor, ritual items and set-up to suit your family’s traditions, and can coordinate with your priest.' },
+      { q: 'Can the baby shower be held at home?', a: 'Yes. Many families prefer home, and we plan the décor and seating so the mother-to-be stays comfortable throughout.' },
+    ],
+  },
+  {
+    slug: 'house-warming-function',
+    event: 'House warming',
+    title: 'House Warming',
+    seoTitle: `House Warming & Griha Pravesha Function in ${site.city}`,
+    short: 'Griha pravesha with puja arrangements, floral décor and catering, so you can welcome guests to your new home.',
+    metaDescription:
+      'House warming and griha pravesha function planning in Bengaluru — puja arrangements, floral and mango-leaf décor, catering and guest management by Sehras.',
+    image: img('1600585154340-be6161a56a0c', 1600),
+    icon: 'M5 19 L20 7 L35 19 M10 15 V34 H30 V15 M17 34 V25 H23 V34',
+    intro: [
+      'Moving into a new home is a milestone worth marking properly. We arrange the griha pravesha so it follows your family’s traditions and runs to the muhurtham, without you having to chase vendors in the middle of a move.',
+      'From the entrance décor and puja set-up to lunch for your guests, our team handles the arrangements so you can welcome everyone into your home.',
+    ],
+    includes: [
+      'Puja items and priest coordination',
+      'Entrance, toran and floral décor',
+      'Rangoli and traditional styling',
+      'Catering, banana-leaf meals and buffets',
+      'Seating, shamiana and guest arrangements',
+      'Set-up and clean-up after the function',
+    ],
+    idealFor: 'Griha pravesha and house warming functions in apartments and independent houses.',
+    faqs: [
+      { q: 'Do you arrange the priest and puja items?', a: 'Yes. We can coordinate with your family priest or arrange one, and source all the puja items for the ceremony.' },
+      { q: 'Can you handle food for a large number of guests?', a: 'Yes. We arrange catering to suit your guest count, including traditional banana-leaf meals or a buffet.' },
+    ],
+  },
+  {
+    slug: 'naming-ceremony-decoration',
+    event: 'Naming ceremony',
+    title: 'Naming Ceremony',
+    seoTitle: `Naming Ceremony & Namakarana Decoration in ${site.city}`,
+    short: 'Namakarana and cradle ceremonies, arranged with care for tradition and an intimate family lunch.',
+    metaDescription:
+      'Naming ceremony decoration in Bengaluru — namakarana and cradle ceremony décor, puja arrangements, catering and family lunch planned by Sehras.',
+    image: img('1515488042361-ee00e0ddd4e4', 1600),
+    icon: 'M7 24 H33 C33 30 27 33 20 33 C13 33 7 30 7 24 Z M20 20 C17 17 17 13 20 8 C23 13 23 17 20 20 Z',
+    intro: [
+      'A naming ceremony is a family’s first celebration with its newest member. We plan the namakarana and cradle ceremony with soft, beautiful décor and the rituals your family follows.',
+      'With a newborn in the house, the last thing parents need is to manage vendors. We handle the décor, puja arrangements and lunch, so the day stays calm and joyful.',
+    ],
+    includes: [
+      'Cradle décor and floral styling',
+      'Name board and backdrop design',
+      'Puja items and priest coordination',
+      'Catering and family lunch',
+      'Return gifts and keepsakes',
+      'Photography for the ceremony',
+    ],
+    idealFor: 'Namakarana, cradle ceremonies and baby welcome celebrations at home or at a venue.',
+    faqs: [
+      { q: 'Do you decorate the cradle for the naming ceremony?', a: 'Yes. Cradle décor with fresh flowers is part of every naming ceremony we plan, along with a backdrop and name board.' },
+      { q: 'Can the naming ceremony be a small family event?', a: 'Of course. Many naming ceremonies are intimate, and we plan the décor and lunch to suit a small gathering at home.' },
+    ],
+  },
+];
+
 // Home page "Ceremonies" rail — one card per function of an Indian wedding.
 // "What we do" on the homepage. `event` must match an option in EnquiryForm so the card preselects it.
 export const occasions = [

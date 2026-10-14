@@ -1,4 +1,4 @@
-import { faqs, services, site, type Service } from './site';
+import { celebrations, faqs, services, site, type Service } from './site';
 
 const abs = (path: string) => (path.startsWith('http') ? path : `${site.url}${path}`);
 const businessId = `${site.url}/#business`;
@@ -28,9 +28,12 @@ export function businessSchema() {
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Wedding & event services',
-      itemListElement: services.map((s) => ({
+      itemListElement: [
+        ...services.map((s) => ({ path: `/services/${s.slug}/`, title: s.title })),
+        ...celebrations.map((c) => ({ path: `/celebrations/${c.slug}/`, title: c.title })),
+      ].map((s) => ({
         '@type': 'Offer',
-        itemOffered: { '@type': 'Service', name: s.title, url: abs(`/services/${s.slug}/`) },
+        itemOffered: { '@type': 'Service', name: s.title, url: abs(s.path) },
       })),
     },
   };
@@ -60,14 +63,14 @@ export function faqSchema(items: { q: string; a: string }[] = faqs) {
   };
 }
 
-export function serviceSchema(s: Service) {
+export function serviceSchema(s: Pick<Service, 'slug' | 'title' | 'metaDescription' | 'image'>, path = `/services/${s.slug}/`) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Service',
     name: s.title,
     serviceType: s.title,
     description: s.metaDescription,
-    url: abs(`/services/${s.slug}/`),
+    url: abs(path),
     image: s.image,
     provider: { '@id': businessId },
     areaServed: { '@type': 'Country', name: 'India' },

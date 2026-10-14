@@ -8,10 +8,10 @@ import { breadcrumbSchema } from '@/lib/schema';
 const description = `Contact Sehras in ${site.city} to plan a wedding, birthday, corporate event or family celebration. Call ${site.phoneDisplay} or send an enquiry — ${site.founder} replies within 24 hours.`;
 
 export const metadata: Metadata = {
-  title: 'Contact Us',
+  title: { absolute: `Contact ${site.name} — Wedding & Event Planners in ${site.city}` },
   description,
   alternates: { canonical: '/contact/' },
-  openGraph: { type: 'website', url: '/contact/', title: `Contact Us | ${site.name}`, description },
+  openGraph: { type: 'website', url: '/contact/', title: `Contact ${site.name} — Wedding & Event Planners in ${site.city}`, description },
 };
 
 export default function ContactPage() {

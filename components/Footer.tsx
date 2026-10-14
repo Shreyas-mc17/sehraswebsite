@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { services, site } from '@/lib/site';
+import { celebrations, services, site } from '@/lib/site';
 
 export default function Footer() {
   return (
@@ -15,6 +15,14 @@ export default function Footer() {
             <ul>
               {services.map((s) => (
                 <li key={s.slug}><Link href={`/services/${s.slug}/`}>{s.title}</Link></li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p className="label">Celebrations</p>
+            <ul>
+              {celebrations.map((c) => (
+                <li key={c.slug}><Link href={`/celebrations/${c.slug}/`}>{c.title}</Link></li>
               ))}
             </ul>
           </div>
